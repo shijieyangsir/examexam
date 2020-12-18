@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page language="java" isELIgnored="false" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
@@ -124,25 +125,34 @@
 								</tr>
 							</thead>
 							<tbody>
-								<tr>
-									<td><input name="ids" type="checkbox"></td>
-									<td>1</td>
 
-									<td>张三</td>
-									<td>
-										男
-									</td>
-									<td>外科</td>
-								</tr>
+                                <c:forEach items="${huangZheList}" var="huanzhe">
 								<tr>
 									<td><input name="ids" type="checkbox"></td>
-									<td>2</td>
-									<td>李四</td>
+                                    <td>${huanzhe.id}</td>
+									<td>${huanzhe.name}</td>
 									<td>
-										女
+										<c:if test="${huanzhe.gender==1}">男</c:if>
+										<c:if test="${huanzhe.gender==0}">女</c:if>
 									</td>
-									<td>妇科</td>
+									<td>${huanzhe.keshi.kname}</td>
 								</tr>
+								</c:forEach>
+
+
+
+<%--							--%>
+<%--							<tr>--%>
+<%--									<td><input name="ids" type="checkbox"></td>--%>
+<%--									<td>1</td>--%>
+
+<%--									<td>张三</td>--%>
+<%--									<td>--%>
+<%--										男--%>
+<%--									</td>--%>
+<%--									<td>外科</td>--%>
+<%--								</tr>--%>
+<%--								--%>
 
 
 							</tbody>

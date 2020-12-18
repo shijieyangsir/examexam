@@ -328,7 +328,7 @@
 			$(function () {
 				$.get("/keShi",function (result) {
 					result.forEach(function (item) {
-						$("#lis").append("<option value='" + item.id + "'>"+item.name+"</option>");
+						$("#lis").append("<option value='" + item.id + "'>"+item.kname+"</option>");
 					})
 				})
 			})

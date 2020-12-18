@@ -15,7 +15,9 @@ public class huanzheServiceimpl implements huanzheService {
     private HuanZheDao huanZheDao;
     @Override
     public List<huanzhe> findAll() {
-        return null;
+
+        List<huanzhe> all = huanZheDao.findAll();
+        return all;
     }
 
     @Override

@@ -2,14 +2,15 @@ package com.itheima.domain;
 
 public class keshi {
     private Integer id;
-    private String name;
+    private String kname;
+
 
     public keshi() {
     }
 
-    public keshi(Integer id, String name) {
+    public keshi(Integer id, String kname) {
         this.id = id;
-        this.name = name;
+        this.kname = kname;
     }
 
     /**
@@ -30,21 +31,21 @@ public class keshi {
 
     /**
      * 获取
-     * @return name
+     * @return kname
      */
-    public String getName() {
-        return name;
+    public String getKname() {
+        return kname;
     }
 
     /**
      * 设置
-     * @param name
+     * @param kname
      */
-    public void setName(String name) {
-        this.name = name;
+    public void setKname(String kname) {
+        this.kname = kname;
     }
 
     public String toString() {
-        return "keshi{id = " + id + ", name = " + name + "}";
+        return "keshi{id = " + id + ", kname = " + kname + "}";
     }
 }

@@ -7,6 +7,8 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("huanzhe")
 public class huanzheController {
@@ -15,10 +17,9 @@ public class huanzheController {
 
     @RequestMapping("findall")
     public String findall(Model model){
-
-
-
-        return null;
+        List<huanzhe> all = huanzheService.findAll();
+        model.addAttribute("huangZheList",all);
+        return "patients-list";
     }
 
 
@@ -26,7 +27,7 @@ public class huanzheController {
 
     public String save(huanzhe huanzhe){
         huanzheService.addhuanzhe(huanzhe);
-        return "success";
+        return "subscribe-form";
     }
 
 
