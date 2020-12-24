@@ -16,12 +16,12 @@ public class huanzheController {
     private huanzheService huanzheService;
 
     @RequestMapping("findall")
-    public String findall(Model model){
-        List<huanzhe> all = huanzheService.findAll();
+    public String findall(Model model,String pname){
+        List<huanzhe> all = huanzheService.findAll(pname);
         model.addAttribute("huangZheList",all);
+        model.addAttribute("pname",pname);
         return "patients-list";
     }
-
 
     @RequestMapping("save")
 

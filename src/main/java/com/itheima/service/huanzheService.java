@@ -9,7 +9,7 @@ public interface huanzheService {
 
 
 
-    List<huanzhe> findAll();
+    List<huanzhe> findAll(String name);
 
 
     void  addhuanzhe(huanzhe huanzhe);

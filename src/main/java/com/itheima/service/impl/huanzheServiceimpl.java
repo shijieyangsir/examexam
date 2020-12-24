@@ -14,9 +14,9 @@ public class huanzheServiceimpl implements huanzheService {
     @Autowired
     private HuanZheDao huanZheDao;
     @Override
-    public List<huanzhe> findAll() {
+    public List<huanzhe> findAll(String name) {
 
-        List<huanzhe> all = huanZheDao.findAll();
+        List<huanzhe> all = huanZheDao.findAll(name);
         return all;
     }
 

@@ -97,9 +97,25 @@
 			<!-- 正文区域 -->
 			<section class="content"> <!-- .box-body -->
 			<div class="box box-primary">
+
+
+
+
 				<div class="box-header with-border">
 					<h3 class="box-title">列表</h3>
 				</div>
+
+
+<%--				value="${name}--%>
+				<div>
+					<form action="/huanzhe/findall" method="post">
+						<input type="text" name="pname" value="${pname}"/>
+						<input type="submit" value="搜索">
+					</form>
+				</div>
+
+
+
 
 				<div class="box-body">
 
